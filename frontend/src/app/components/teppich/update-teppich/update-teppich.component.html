@@ -1,0 +1,45 @@
+<h3>Update Teppich</h3>
+<div [hidden]="submitted" style="padding-top: 20px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+                <label for="beschreibung" class="col-sm-2 col-form-label">Beschreibung</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="beschreibung" required [(ngModel)]="teppich.beschreibung" name="beschreibung">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="abmessung" class="col-sm-2 col-form-label">Abmessung</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="abmessung" required [(ngModel)]="teppich.abmessung" name="abmessung">
+            </div>
+        </div>
+
+        
+        <div class="form-group row">
+            <label for="preis" class="col-sm-2 col-form-label">Preis</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="preis" required [(ngModel)]="teppich.preis" name="preis">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="piece" class="col-sm-2 col-form-label">Stück</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="piece" required [(ngModel)]="teppich.piece" name="piece">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="date" class="col-sm-2 col-form-label">Datum</label>
+            <div class="col-sm-2">
+                <input type="date" class="form-control" id="date" required [(ngModel)]="teppich.date" name="date">
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-success">Speichern</button>
+    </form>
+</div>
+<div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+</div>

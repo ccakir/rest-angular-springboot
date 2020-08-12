@@ -1,0 +1,38 @@
+<div class="container">
+    
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2>Alle Teppiche</h2>
+            </div>
+            <div class="panel-body">
+
+                <div class="alert alert-success" *ngIf="message">{{ message }}</div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Beschreibung</th>
+                            <th>Abmessungen</th>
+                            <th>Stück</th>
+                            <th>Preis</th>
+                            <th>Datum</th>
+                            <th>Delete</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let teppich of teppiche">
+                            <td>{{ teppich.beschreibung}}</td>
+                            <td>{{ teppich.abmessung}}</td>
+                            <td>{{ teppich.piece}}</td>
+                            <td>{{ teppich.preis}}</td>
+                            <td>{{ teppich.date}}</td>
+                            <td><button class="btn btn-danger" (click)="deleteTeppich(teppich.id)">Delete</button></td>
+                            <td><button class="btn btn-info" (click)="updateTeppich(teppich.id)">Update</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+   
+</div>
